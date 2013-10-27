@@ -2,7 +2,10 @@
 
 namespace Amplifier;
 
-use Facebook;
+/* 
+ * Amplifier - Extension of Facebook PHP SDK
+ * @author Neeraj Kumar <hello@neerajkumar.name>
+ */
 
 class Amplifier extends Facebook {
 
