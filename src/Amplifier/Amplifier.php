@@ -2,9 +2,12 @@
 
 namespace Amplifier;
 
-/* 
+/** 
  * Amplifier - Extension of Facebook PHP SDK
+ * 
  * @author Neeraj Kumar <hello@neerajkumar.name>
+ * @package Amplifier
+ * 
  */
 
 class Amplifier extends \Facebook {
@@ -13,7 +16,14 @@ class Amplifier extends \Facebook {
 		parent::__construct($config);
 	}
 
-	public function has_liked_page($page_id = null) {
+	/**
+	 * hasLikedPage - returns weather a user has like a page or not
+	 * 
+	 * @param $page_id
+	 * @return boolean
+	 * 
+	 */
+	public function hasLikedPage($page_id = null) {
 		
 		if(is_null($page_id)) {
 			return false;
@@ -31,12 +41,8 @@ class Amplifier extends \Facebook {
 			}
 		}
 		
+		return false; /* failsafe? :/ */
+		
 	}
 	
-    public static function index() {
-
-        return "Hello Composer!";
-
-    }
-
 }
