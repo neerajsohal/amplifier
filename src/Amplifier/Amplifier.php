@@ -44,5 +44,38 @@ class Amplifier extends \Facebook {
 		return false; /* failsafe? :/ */
 		
 	}
+
+	/**
+	 * uploadImage - uploads an image to user's profile
+	 * 
+	 * @param $image_path
+	 * @param $description
+	 * @return String
+	 * 
+	 */
+	public function uploadImage($image_path = null, $description = null) {
+		
+		if(is_null($image_path)) {
+			return false;
+		}
+
+		if ($this->getUser()) {
+			try {
+				$result = $this->api (
+					'/me/photos', 
+					'POST',
+					array(
+						'source' => '@' . $image_path,
+						'message' => $description
+					)
+				);
+			} catch (\FacebookApiException $e) {
+				error_log($e);
+			}
+		}
+		
+		return false; /* failsafe? :/ */
+		
+	}
 	
 }
