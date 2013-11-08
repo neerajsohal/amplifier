@@ -11,4 +11,4 @@ $app_id = $argv[1];
 $secret = $argv[2];
 
 $a = new Amplifier\Amplifier(array('appId' => $app_id, 'secret' => $secret));
-var_dump($a->has_liked_page(186421834806105));
+var_dump($a->hasLikedPage(186421834806105));
