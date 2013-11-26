@@ -9,6 +9,11 @@ Couple of months back, I started writing my own functions on top of Facebook's P
 
 I am building Amplifier by keeping Composer in mind. Therefore, for installing Amplifier, you should be comfortable with composer. If you are not, I suggest you learn it. It's one of the best things that has happened to PHP and will surely make you a better programmer :)
 
+## Requirements
+
+- Facbeook's PHP SDK
+- PHP version > 5.5.*
+
 ## Installation
 
 To install via Composer, Simply add a dependency on neerajsohal/amplifier to your project's composer.json file. Here is a minimal example of a composer.json file that just defines a dependency on Amplfier's master branch:

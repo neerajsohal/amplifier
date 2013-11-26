@@ -66,10 +66,11 @@ class Amplifier extends \Facebook {
 					'/me/photos', 
 					'POST',
 					array(
-						'source' => '@' . $image_path,
+						'source' => new \CURLFile($image_path),
 						'message' => $description
 					)
 				);
+				return $result;
 			} catch (\FacebookApiException $e) {
 				error_log($e);
 			}
