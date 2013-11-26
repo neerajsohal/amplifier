@@ -22,6 +22,9 @@ class AmplifierTestCase extends \PHPUnit_Framework_TestCase
 	function testHasLikePage() {
 		global $config;
 		$a = new \Amplifier\Amplifier(array('appId' => $config['app_id'], 'secret' => $config['secret']));
-		$this->assertInternalType('boolean', $a->hasLikedPage($config['test_page_id']));
+		$a->setAccessToken($config['access_token']);
+		//$this->assertInternalType('boolean', $a->hasLikedPage($config['test_page_id']));
+		/* use this when you are sure the users with creds in config have actually like the page */
+		$this->assertTrue($a->hasLikedPage($config['test_page_id']));
 	}
 }
