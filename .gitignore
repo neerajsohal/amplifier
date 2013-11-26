@@ -1,6 +1,6 @@
 vendor
 composer.lock
-
+tests/config.php
 
 # OS generated files #
 ######################
