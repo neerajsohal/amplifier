@@ -4,6 +4,6 @@ php:
   - 5.4
   - 5.5
 before_script:
-  - php composer install
+  - composer install
   - cd tests
   - phpunit tests
