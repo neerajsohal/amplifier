@@ -21,6 +21,7 @@ class Amplifier extends \Facebook {
 	 * 
 	 * @param $page_id
 	 * @return boolean
+	 * @author Neeraj Kumar <hello@neerajkumar.name>
 	 * 
 	 */
 	public function hasLikedPage($page_id = null) {
