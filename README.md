@@ -1,5 +1,7 @@
 # Amplifier
 
+[![Build Status](https://travis-ci.org/neerajsohal/amplifier.png)](https://travis-ci.org/neerajsohal/amplifier)
+
 Amplifier is an extension of Facebook PHP SDK. It provides additional functions to Facebook's SDK.
 
 Couple of months back, I started writing my own functions on top of Facebook's PHP SDK to cut down the development time by defining methods for tasks like:
