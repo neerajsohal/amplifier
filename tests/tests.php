@@ -34,5 +34,6 @@ class AmplifierTestCase extends \PHPUnit_Framework_TestCase
 		$a->setAccessToken($config['access_token']);
 		$a->setFileUploadSupport(true);
 		$this->assertArrayHasKey('id', $a->uploadImage(__DIR__ . '/img/350x150.gif', 'Test Description'));
+		
 	}
 }
