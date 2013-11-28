@@ -15,7 +15,7 @@ class Amplifier extends \Facebook {
 	function __construct($config = array()) {
 		parent::__construct($config);
 	}
-v
+	
 	/**
 	 * hasLikedPage - returns weather a user has like a page or not
 	 * 
