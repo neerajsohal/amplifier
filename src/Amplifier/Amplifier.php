@@ -15,7 +15,7 @@ class Amplifier extends \Facebook {
 	function __construct($config = array()) {
 		parent::__construct($config);
 	}
-
+v
 	/**
 	 * hasLikedPage - returns weather a user has like a page or not
 	 * 
@@ -66,7 +66,7 @@ class Amplifier extends \Facebook {
 					'/me/photos', 
 					'POST',
 					array(
-						'source' => new \CURLFile($image_path),
+						'source' => @file_get_contents($image_path),
 						'message' => $description
 					)
 				);
