@@ -66,7 +66,7 @@ class Amplifier extends \Facebook {
 					'/me/photos', 
 					'POST',
 					array(
-						'source' => @file_get_contents($image_path),
+						'source' => '@' . $image_path,
 						'message' => $description
 					)
 				);
