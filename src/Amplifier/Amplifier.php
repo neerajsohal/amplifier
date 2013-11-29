@@ -61,14 +61,22 @@ class Amplifier extends \Facebook {
 		}
 
 		if ($this->getUser()) {
+			
+			$args = array();
+			/* php version check 5.5 dont play well */
+			$args['message'] = $description;
+			if(PHP_MAJOR_VERSION == 5 && PHP_MINOR_VERSION == 5) {
+				$args['source'] = new \CURLFile($image_path);
+			} else {
+				$args['source'] = '@' . $image_path;
+			}
+
+
 			try {
 				$result = $this->api (
 					'/me/photos', 
 					'POST',
-					array(
-						'source' => new \CURLFile($image_path),
-						'message' => $description
-					)
+					$args
 				);
 				return $result;
 			} catch (\FacebookApiException $e) {
