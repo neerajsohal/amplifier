@@ -4,14 +4,15 @@
     "description": "Extension of Facbeook PHP SDK",
     "keywords": ["facebook", "sdk"],
     "homepage": "https://github.com/neerajsohal/amplifier",
-    "license": "",
+    "license": "MIT",
     "require": {
         
     },
     "authors": [
         {
             "name": "Neeraj Kumar",
-            "email": "hello@neerajkumar.name"
+            "email": "hello@neerajkumar.name",
+            "homepage": "http://www.neerajkumar.name"
         }
     ],
     "require": {
