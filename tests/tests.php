@@ -36,4 +36,13 @@ class AmplifierTestCase extends \PHPUnit_Framework_TestCase
 		$this->assertArrayHasKey('id', $a->uploadImage(__DIR__ . '/img/350x150.gif', 'Test Description'));
 		
 	}
+	
+	function testGetFriends() {
+		global $config;
+		$a = new \Amplifier\Amplifier(array('appId' => $config['app_id'], 'secret' => $config['secret']));
+		$a->setAccessToken($config['access_token']);
+
+		$a->getFriends();
+		//$this->assertArrayHasKey('id', $a->uploadImage(__DIR__ . '/img/350x150.gif', 'Test Description'));
+	}
 }

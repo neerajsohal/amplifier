@@ -87,5 +87,27 @@ class Amplifier extends \Facebook {
 		return false; /* failsafe? :/ */
 		
 	}
+
+	/**
+	 * getFriends - returns an array of friends if successful or false if failed
+	 * 
+	 * @return Mixed
+	 * 
+	 */
+	public function getFriends() {
+		if ($this->getUser()) {
+			try {
+				$friends = $this->api("/me/friends/");
+				if( !empty($friends['data']) )
+					return $friends['data'];
+				else
+					return false;
+			} catch (\FacebookApiException $e) {
+				error_log($e);
+				return false;
+			}
+		}
+		
+	}
 	
 }
